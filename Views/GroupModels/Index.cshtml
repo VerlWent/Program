@@ -1,0 +1,20 @@
+﻿@model List<Brand>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@foreach (var brand in Model)
+{
+    <h3>@brand.Name</h3>
+    <ul>
+        @foreach (var car in brand.Models)
+        {
+            <li>@car.Name</li>
+        }
+    </ul>
+}
+
+
